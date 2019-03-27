@@ -1,0 +1,36 @@
+<div class="form-components">
+  <div class="row justify-content-md-center">
+      <span class="col-1 text">Height: </span>
+      <mat-slider class="col-6" color="warn" title="Height" thumbLabel [formControl]="height" [displayWith]="formatLabelHeight" tickInterval="1"
+        min="30" max="260">
+      </mat-slider>
+      <input class="col-1 validate" type="number" value="{{heightValue}}" [(ngModel)] = "heightValue" (keyup)="onKeyHeight($event)" min=30 max=260>
+  </div>
+  <div class="row justify-content-md-center">
+      <span class="col-1 text">Weight: </span>
+      <mat-slider class="col-6" color="warn" title="Weight" thumbLabel [formControl]="weight" [displayWith]="formatLabelWeight" tickInterval="1"
+        min="1" max="650"></mat-slider>
+      <input class="col-1 validate" type="number" value="{{weightValue}}" [(ngModel)] = "weightValue" (keyup)="onKeyWeight($event)">
+    </div>
+  <!-- <div class="row justify-content-md-center">
+    <div [ngClass]="currentClasses" role="alert">
+        {{currentMessage}}
+    </div>
+  </div> -->
+
+  <mwl-gauge
+      [max]="300"
+      [dialStartAngle]="180"
+      [dialEndAngle]="0"
+      [value]= "bmi$ | async" 
+      [label]="percentageValue"
+      [animated]="true"
+      [animationDuration]="1">
+    </mwl-gauge>
+
+    <ng-gauge size="150" type="full" thick="5" 
+          min="0" max="120" value="68.2" 
+          cap="round" label="Speed" append="mph"
+          foreground-color="#ffcc66" background-color="#EEE">
+</ng-gauge>
+</div>

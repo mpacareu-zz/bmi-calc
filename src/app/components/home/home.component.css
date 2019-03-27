@@ -1,0 +1,21 @@
+
+.content {
+    /* background-image: url('../../../assets/img/boxer.jpg'); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/img/boxer.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.9;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
